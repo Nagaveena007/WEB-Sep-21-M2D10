@@ -8,6 +8,41 @@ body{
 hr{
     color: grey;
 }
+
+
+
+
+
+.nav__wrap {
+    width: 100vw; /* remember that vw = viewport width = the size of your page */
+  
+    /*body is position relative*/
+    position: sticky; /* makes sure the navbar stays on screen when scrolling down */
+    top: 0;
+    left: 0;
+  
+    /*this is the container of both the navbar and the little decoration at the top, which we need stacked as a column */
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+  .nav__logo {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 4px;
+  
+  }
+  .nav__wrap img:not(.nav__logo) {
+    width: 100%;
+    height: 4px;
+  }
+
+  .card-body{
+    background-image: url(//images-2.gog-statics.com/29bc0ea….jpg);
+
+    box-shadow:  rgb(144 76 76 / 75%) 0px 0px 0px 1000px inset;
+  }
 .card-img{
     min-height: 150px;
     min-width: 150px;
@@ -17,6 +52,23 @@ background-color: purple;
 font-weight: bold;
 color: white;
      }
+
+.card-body.discount{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 50px;
+  height: 30px;
+
+}
+.card-body.newPrice{
+align-self: flex-end;
+text-align: center;
+}
+
      .ring{
         background: rgb(2,0,36);
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(181,11,202,1) 48%, rgba(157,0,255,1) 100%);
